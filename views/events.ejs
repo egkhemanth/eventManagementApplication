@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/sketchy/bootstrap.min.css" rel="stylesheet"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Document</title>
+</head>
+
+<body>
+  <div class='container'>
+   
+    <% for(var i=0; i < data.length; i++) { %>
+      <div  style="display: inline-block;"class="card-deck" style="width: 18rem;">
+        <div class="card" style="width:19rem;">
+          <img src="<%= data[i].imagec %>" style='height:185.59px; width: 100%;'class="card-img-top" alt="No Image">
+           <div class="card-body">
+            <h5 class="card-text"><%= data[i].title %></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Organiser : <%= data[i].organiser %></h6>
+            <h6 class="card-subtitle mb-2 text-muted"><%= data[i].category %></h6>
+            <p class="card-text">Location : <%= data[i].location %></p>
+            <p class="card-text">Pincode : <%= data[i].pincode %></p>
+            <p class="card-text">Date : <%= data[i].date %></p>
+            <p class="card-text">Entry Price : <%= data[i].price %></p>
+          </div>
+          <br>
+        </div>   
+        <br>
+      </div>   
+  
+    <% } %>
+    </div>
+</body>
+
+</html>

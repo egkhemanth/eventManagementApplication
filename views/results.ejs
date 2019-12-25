@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <link href="https://stackpath.bootstrapcdn.com/bootswatch/4.4.1/sketchy/bootstrap.min.css" rel="stylesheet"/>
+ <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Results</title>
+  
+    
+</head>
+<body>
+  <br>
+  <div class='container'>
+    <h1 style="display:inline-block">Results</h1><br>
+    <% for(var i=0; i < newArray.length; i++) { %>
+      <div  style="display: inline-block;"class="card-deck" style="width: 18rem;">
+        <div class="card" style="width:19rem;">
+          <img src="<%= newArray[i].imagec %>" style='height:185.59px; width: 100%;'class="card-img-top" alt="No Image">
+          <div class="card-body">
+            <h5 class="card-text"><%= newArray[i].title %></h5>
+            <h6 class="card-subtitle mb-2 text-muted">Organiser : <%= newArray[i].organiser %></h6>
+            <h6 class="card-subtitle mb-2 text-muted"><%= newArray[i].category %></h6>
+            <p class="card-text">Location : <%= newArray[i].location %></p>
+            <p class="card-text">Pincode : <%= newArray[i].pincode %></p>
+            <p class="card-text">Date : <%= newArray[i].date %></p>
+            <p class="card-text">Entry Price : <%= newArray[i].price %></p>
+          </div>
+        </div>
+      </div>
+        
+    <% } %><br><br>
+    <a class="btn btn-outline-primary" href="/" role="button"><h4>Try Again</h4></a>
+    
+    
+    </div>
+</body>
+
+</html>
